@@ -61,7 +61,7 @@ contract HomeBridgeErcToNative is
         uint256[2] _foreignDailyLimitForeignMaxPerTxArray, // [ 0 = _foreignDailyLimit, 1 = _foreignMaxPerTx ]
         address _owner,
         int256 _decimalShift
-    ) external onlyRelevantSender returns (bool) {
+    ) external returns (bool) {
         _initialize(
             _validatorContract,
             _dailyLimitMaxPerTxMinPerTxArray,
@@ -88,7 +88,7 @@ contract HomeBridgeErcToNative is
         address _feeManager,
         uint256[2] _homeFeeForeignFeeArray, // [ 0 = _homeFee, 1 = _foreignFee ]
         int256 _decimalShift
-    ) external onlyRelevantSender returns (bool) {
+    ) external returns (bool) {
         _initialize(
             _validatorContract,
             _dailyLimitMaxPerTxMinPerTxArray,

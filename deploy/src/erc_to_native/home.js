@@ -133,6 +133,7 @@ async function initializeBridge({ validatorsBridge, bridge, initialNonce }) {
       )
       .encodeABI()
   }
+  console.log('txInitializeHomeBridge =>', initializeHomeBridgeData)
 
   const txInitializeHomeBridge = await sendRawTxHome({
     data: initializeHomeBridgeData,

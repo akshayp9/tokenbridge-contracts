@@ -10,7 +10,7 @@ mkdir -p flats/arbitrary_message
 mkdir -p flats/amb_erc677_to_erc677
 mkdir -p flats/upgradeability
 
-FLATTENER=./node_modules/.bin/truffle-flattener
+FLATTENER=truffle-flattener
 BRIDGE_CONTRACTS_DIR=contracts/upgradeable_contracts
 VALIDATOR_CONTRACTS_DIR=contracts/upgradeable_contracts
 

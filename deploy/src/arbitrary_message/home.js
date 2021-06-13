@@ -39,6 +39,7 @@ async function initializeBridge({ validatorsBridge, bridge, initialNonce }) {
   const foreignChainId = await web3Foreign.eth.getChainId()
 
   console.log('\ninitializing Home Bridge with following parameters:\n')
+  // eslint-disable-next-line prettier/prettier
   console.log(`SOURCE_CHAIN_ID: ${homeChainId}, DESTINATION_CHAIN_ID: ${foreignChainId}, Home Validators: ${validatorsBridge.options.address},
   HOME_MAX_AMOUNT_PER_TX (gas limit per call): ${HOME_MAX_AMOUNT_PER_TX},
   HOME_GAS_PRICE: ${HOME_GAS_PRICE}, HOME_REQUIRED_BLOCK_CONFIRMATIONS : ${HOME_REQUIRED_BLOCK_CONFIRMATIONS}
@@ -61,6 +62,7 @@ async function initializeBridge({ validatorsBridge, bridge, initialNonce }) {
     privateKey: deploymentPrivateKey,
     url: HOME_RPC_URL
   })
+  console.log('txInitializeHomeBridge ==>', txInitializeHomeBridge)
   if (txInitializeHomeBridge.status) {
     assert.strictEqual(Web3Utils.hexToNumber(txInitializeHomeBridge.status), 1, 'Transaction Failed')
   } else {
